@@ -1,70 +1,57 @@
 import React from 'react';
-import Background from './Background'
+//import Background from './Background'
 import Header from './Header'
+import Content from './Content'
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      page: 'industries',
-      type: '',
-      pageContent: null,
-      background: ''
+      pageData: {}
     };
 
-    this.changeContent = this.changeContent.bind(this)
+    this.changePage = this.changePage.bind(this)
   }
 
   componentDidMount(){
-    this.changeContent('services')
+    console.log('hello')
+    this.changeBackground()
   }
 
-  //name parameter is the id/key? of the menu button that is clicked
-  changeContent(pageName){
-
+  //pageName is the id of the menu button that is clicked
+  changePage(pageName){
     fetch('./content.json')
     .then(response => response.json())
     .then(data => {
       let pages = data.pages
       let pageData = pages.find(element => element.slug === pageName)
-      console.log(pageData)
 
       this.setState({
-        page: pageName,
-        pageContent: pageData
+        pageData: pageData
       })
-
-
     })
 
   }
 
-
+  //combine this into changePage()
+  changeBackground(){
+    let background = 'slide_one.jpg';
+    // backgroundImage: `url(${background})`
+    document.body.style.backgroundImage = `url(./backgrounds/${background})`;
+    let bodyStyle = {
+      backgroundImage: `url(./backgrounds/${background})`,
+    };
+  }
 
   render(){
-    let currentPage;
-    switch (this.state.page){
-      case 'industries':
-        // currentPage = (
-        //   <div></div>
-        // )'
-        console.log('industries')
-        break;
 
-      case 'services':
-        console.log('services');
-          break;
-
-      default:
-        return null;
-    }
   return (
-  <div>
-    <Background backgroundImg={this.state.img}/>
-    <Header />
-
-  </div>
-  )
+    <div>
+      <Header changePage={this.changePage} changeBackground={this.changeBackground}/>
+    {/* <div className='container'> */}
+      <Content pageData={this.state.pageData}/>
+    </div>
+    )
   }
 
 }
