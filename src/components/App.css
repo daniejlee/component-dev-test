@@ -11,10 +11,7 @@ body{
   width: 100%;
 }
 
-.menu, .headline, .cta {
-  /* font-family: 'Helvetica Neue'; */
+.menu, .headline, .cta, .subhead{
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
 }
-
-.sub-head

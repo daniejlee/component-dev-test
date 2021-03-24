@@ -1,21 +1,20 @@
 import React from 'react';
-//import Background from './Background'
-import Header from './Header'
-import Content from './Content'
+import Header from './Header';
+import Content from './Content';
+import './App.css';
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      pageData: {}
+      pageData: {},
+      background: ''
     };
 
     this.changePage = this.changePage.bind(this)
   }
 
   componentDidMount(){
-    console.log('hello')
-    this.changeBackground()
   }
 
   //pageName is the id of the menu button that is clicked
@@ -25,31 +24,28 @@ export default class App extends React.Component {
     .then(data => {
       let pages = data.pages
       let pageData = pages.find(element => element.slug === pageName)
-
+      console.log(pageData.blocks[0].background)
       this.setState({
-        pageData: pageData
+        pageData: pageData,
+        background: pageData.blocks[0].background
       })
+      this.changeBackground(this.state.background)
     })
-
   }
 
-  //combine this into changePage()
-  changeBackground(){
-    let background = 'slide_one.jpg';
-    // backgroundImage: `url(${background})`
+  changeBackground(background){
     document.body.style.backgroundImage = `url(./backgrounds/${background})`;
-    let bodyStyle = {
-      backgroundImage: `url(./backgrounds/${background})`,
-    };
   }
 
   render(){
 
   return (
-    <div>
-      <Header changePage={this.changePage} changeBackground={this.changeBackground}/>
-    {/* <div className='container'> */}
-      <Content pageData={this.state.pageData}/>
+    <div className="container">
+      <Header changePage={this.changePage}/>
+      {
+        Object.keys(this.state.pageData).length !== 0 &&
+          <Content pageData={this.state.pageData}/>
+      }
     </div>
     )
   }

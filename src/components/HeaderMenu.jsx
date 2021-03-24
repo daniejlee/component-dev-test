@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 
-const HeaderMenu = (props) => {
+const HeaderMenu = ({ changePage }) => {
 
   const [titles, setTitles] = useState([])
 
@@ -9,7 +9,6 @@ const HeaderMenu = (props) => {
       .then(res => res.json())
       .then(data => {
         let pages = data.pages
-
         let newPagesArray = []
         for (let key in pages) {
           newPagesArray.push(
@@ -19,14 +18,13 @@ const HeaderMenu = (props) => {
             }
           )
         }
-
         setTitles(newPagesArray)
-
+        changePage(pages[0].slug)
       })
-  }, []);
+  }, [changePage]);
 
   const handleClick = (event) => {
-    props.changePage(event.target.id)
+    changePage(event.target.id)
   }
 
 
