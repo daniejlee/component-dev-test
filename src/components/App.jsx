@@ -15,7 +15,7 @@ export default class App extends React.Component {
   }
 
 
-  //pageName is the id of the menu button that is clicked
+  //takes the page slug as parameter
   changePage(pageName){
     fetch('./content.json')
     .then(response => response.json())

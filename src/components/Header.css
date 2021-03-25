@@ -1,5 +1,6 @@
 .header {
   padding-top: 3.5vh;
+  padding-right: 0;
   align-items: center;
 }
 
@@ -19,6 +20,7 @@
 
 .contact{
   text-align: right;
+  padding-left: 0;
 }
 
 .contact-button {
@@ -38,4 +40,5 @@
 
 .logo{
   width: calc(77px + 23 * ((100vw - 320px) / 1600));
+  cursor: pointer;
 }

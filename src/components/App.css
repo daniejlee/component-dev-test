@@ -14,17 +14,20 @@ body, html {
 }
 
 .page-layout {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
-  padding-right: 5vw;
-  padding-left: 5vw;
+  padding-right: calc(12vw - 100 * ((100vw - 320px) / 1600));
+  padding-left: calc(12vw - 100 * ((100vw - 320px) / 1600));
   margin-right: auto;
   margin-left: auto;
-  max-width: 1440px
+  max-width: 1440px;
+
 }
 
-@media only screen and (min-width: 1600px){
+@media only screen and (min-width: 1440px){
   .page-layout {
-    padding-right: 0;
-    padding-left: 0;
+    padding-right: calc(10vw - 200 * ((100vw - 1440px) / 480));
+    padding-left: calc(10vw - 200 * ((100vw - 1440px) / 480));
   }
 }
