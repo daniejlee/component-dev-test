@@ -1,13 +1,23 @@
+.header {
+  padding-top: 3.5vh;
+  align-items: center;
+}
+
 .menu {
   padding-left: 0;
 }
 
 .menu-item {
   cursor: pointer;
+  width: 100px;
+  font-size: calc(16px + 2 * ((100vw - 320px) / 1600));
+}
+
+.menu-active {
+  color: #DAB205;
 }
 
 .contact{
-  display: inline-block;
   text-align: right;
 }
 
@@ -16,4 +26,16 @@
   color: white;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   border-radius: 0;
+  height: calc(2.3rem + 5 * ((100vw - 320px) / 1600));
+  width: calc(120px + 23 * ((100vw - 320px) / 1600));
+  font-weight: bold;
+  font-size: calc(.8rem + 1 * ((100vw - 320px) / 1600));
+}
+
+.contact-button:hover {
+  color: #DAB205;
+}
+
+.logo{
+  width: calc(77px + 23 * ((100vw - 320px) / 1600));
 }

@@ -1,13 +1,27 @@
 .headline {
-
+  line-height: .9;
+  font-size: calc(60px + 25 * ((100vw - 320px) / 1600));
 }
 
 .subhead {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
+  /* margin-left: calc(2rem); */
+}
+
+.content-block {
+  display: flex;
+  align-items: center;
 }
 
 .cta-block {
+  margin-top: 25vh;
   background-color: white;
-  height: 10vh;
+  height: 18vh;
+  align-items: center;
+}
+
+.cta {
+  text-align: center;
+
 }
