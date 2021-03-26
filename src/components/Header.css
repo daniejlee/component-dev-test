@@ -36,7 +36,7 @@
 .menu-item {
   cursor: pointer;
   width: 100px;
-  margin-top: .3rem;
+  margin-top: .5rem;
   font-size: calc(16px + 2 * ((100vw - 320px) / 1600));
   transition: transform .2s;
 }
