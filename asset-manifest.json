@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/component-dev-test/static/css/main.a9f5289e.chunk.css",
+    "main.css": "/component-dev-test/static/css/main.2d4eda7f.chunk.css",
     "main.js": "/component-dev-test/static/js/main.fd46bb16.chunk.js",
     "main.js.map": "/component-dev-test/static/js/main.fd46bb16.chunk.js.map",
     "runtime-main.js": "/component-dev-test/static/js/runtime-main.2dee3bd1.js",
@@ -8,13 +8,13 @@
     "static/js/2.97559122.chunk.js": "/component-dev-test/static/js/2.97559122.chunk.js",
     "static/js/2.97559122.chunk.js.map": "/component-dev-test/static/js/2.97559122.chunk.js.map",
     "index.html": "/component-dev-test/index.html",
-    "static/css/main.a9f5289e.chunk.css.map": "/component-dev-test/static/css/main.a9f5289e.chunk.css.map",
+    "static/css/main.2d4eda7f.chunk.css.map": "/component-dev-test/static/css/main.2d4eda7f.chunk.css.map",
     "static/js/2.97559122.chunk.js.LICENSE.txt": "/component-dev-test/static/js/2.97559122.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.2dee3bd1.js",
     "static/js/2.97559122.chunk.js",
-    "static/css/main.a9f5289e.chunk.css",
+    "static/css/main.2d4eda7f.chunk.css",
     "static/js/main.fd46bb16.chunk.js"
   ]
 }
