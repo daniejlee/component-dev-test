@@ -7,8 +7,6 @@ const Header = (props) => {
 
   return (
     <div className="header-block">
-
-      {/* <div className="row header"> */}
       <div className="header">
         <div className="header-section">
           <img className="logo" src={abcLogo} alt="abc logo" />
