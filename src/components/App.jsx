@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from './Header';
 import Content from './Content';
-
 import './App.css';
 
 export default class App extends React.Component {
@@ -30,19 +29,17 @@ export default class App extends React.Component {
   }
 
   render(){
-    // document.body.style.backgroundImage = `url(./backgrounds/${this.state.background})`;
-  return (
-    <>
-      <div className="background" style={{ backgroundImage: `url(./backgrounds/${this.state.background})` }}></div>
-      <div className="page-layout">
-        <Header changePage={this.changePage}/>
-        {
-          Object.keys(this.state.pageData).length !== 0 &&
-            <Content pageData={this.state.pageData}/>
-        }
-      </div>
-    </>
-    )
-  }
-
+    return (
+      <>
+        <div className="background" style={{ backgroundImage: `url(./backgrounds/${this.state.background})` }}></div>
+        <div className="page-layout">
+          <Header changePage={this.changePage}/>
+          {
+            Object.keys(this.state.pageData).length !== 0 &&
+              <Content pageData={this.state.pageData}/>
+          }
+        </div>
+      </>
+      )
+    }
 }

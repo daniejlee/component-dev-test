@@ -1,3 +1,20 @@
+.header-block {
+  animation-name: slideTop;
+  animation-duration: 1.5s;
+  animation-fill-mode: backwards;
+  animation-delay: .3s;
+}
+
+@keyframes slideTop {
+  0% {
+    transform: translateY(-1200px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
 .header {
   padding-top: 3.5vh;
   padding-right: 0;
@@ -42,6 +59,7 @@
 .contact-button:hover {
   color: #DAB205;
 }
+
 
 @media only screen and (max-width: 285px){
   .contact-button{
