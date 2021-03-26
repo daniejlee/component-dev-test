@@ -6,6 +6,8 @@
   animation-duration: 1.5s;
   animation-fill-mode: backwards;
   animation-delay: 1.8s;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 @keyframes fadeIn {
@@ -17,20 +19,25 @@
   }
 }
 
-
 .headline {
   line-height: .9;
   font-weight: bold;
   font-size: calc(40px + 45 * ((100vw - 320px) / 1600));
+  margin-bottom: 1.7rem;
+  flex-basis: 60%;
+  max-width: 60%;
 }
 
 .subhead {
+  flex-grow: 1;
+  flex-basis: 12rem;
+  max-width: 100%;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
   align-items: center;
   font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
-  flex-basis: 10rem;
   line-height: 2;
+
 }
 
 
@@ -38,8 +45,9 @@
   margin-top: auto;
   background-color: white;
   height: 18vh;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-
   animation-name: slideRight;
   animation-duration: 1.2s;
   animation-fill-mode: backwards;
@@ -57,15 +65,19 @@
 
 
 .cta {
-  text-align: center;
+  flex-basis: 55%;
+  max-width: 55%;
   font-weight: 800;
   font-size: calc(14px + 6 * ((100vw - 320px) / 1600));
+  margin-left: 5vw;
 }
 
 .lets-talk {
   display: flex;
   align-items: center;
   font-size: calc(12px + 1 * ((100vw - 320px) / 1600));
+  flex-grow: 1;
+  margin-left: 1rem;
 }
 
 .lets-talk > span {
@@ -77,5 +89,5 @@
   fill: #FFC555;
   margin-left: 1rem;
   cursor: pointer;
-  flex-basis: 5rem;
+  flex-basis: 2rem;
 }

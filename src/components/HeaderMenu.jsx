@@ -35,7 +35,7 @@ const HeaderMenu = ({ changePage }) => {
 
 
   return (
-    <ul className="menu mt-4" style={{ listStyleType: 'none' }}>
+    <ul className="menu" style={{ listStyleType: 'none' }}>
       {titles.map((element) => {
         return (
           <li onClick={handleClick} id={element.slug} key={element.slug}

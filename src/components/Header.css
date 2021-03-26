@@ -14,20 +14,29 @@
   }
 }
 
-
 .header {
+  display: flex;
+  flex-wrap: wrap;
   padding-top: 3.5vh;
   padding-right: 0;
   align-items: center;
 }
 
+.header-section {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
 .menu {
+  margin-top: 1.4rem;
   padding-left: 0;
 }
 
 .menu-item {
   cursor: pointer;
   width: 100px;
+  margin-top: .3rem;
   font-size: calc(16px + 2 * ((100vw - 320px) / 1600));
   transition: transform .2s;
 }
@@ -46,7 +55,7 @@
 }
 
 .contact-button {
-  border-color: white;
+  border: 1px solid white;
   color: white;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   border-radius: 0;
@@ -54,6 +63,11 @@
   width: calc(120px + 23 * ((100vw - 320px) / 1600));
   font-weight: bold;
   font-size: calc(.8rem + 1 * ((100vw - 320px) / 1600));
+  background-color: transparent;
+}
+
+.contact-button:focus {
+  outline: none;
 }
 
 .contact-button:hover {

@@ -7,12 +7,14 @@ const Header = (props) => {
 
   return (
     <div className="header-block">
-      <div className="row header">
-        <div className="col">
-        <img className="logo" src={abcLogo} alt="abc logo" />
+
+      {/* <div className="row header"> */}
+      <div className="header">
+        <div className="header-section">
+          <img className="logo" src={abcLogo} alt="abc logo" />
         </div>
-        <div className="col contact">
-          <button type="button" className="btn contact-button">Contact Us</button>
+        <div className="header-section contact">
+          <button className="contact-button">Contact Us</button>
         </div>
       </div>
 

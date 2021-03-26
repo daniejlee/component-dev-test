@@ -7,20 +7,20 @@ const Content = (props) => {
 
   return (
     <>
-    <div className="row content-block">
-      <div className="col-7 headline mb-4">
+    <div className="content-block">
+      <div className="headline">
           {blockContent.headline}
       </div>
-      <div className="col subhead mb-4">
+      <div className="subhead">
         {blockContent.subhead}
       </div>
     </div>
 
-    <div className="row cta-block">
-        <div className="col-7 cta">
+    <div className="cta-block">
+        <div className="cta">
           {blockContent.cta}
         </div>
-        <div className="col lets-talk">
+        <div className="lets-talk">
           <span>
             LET'S TALK.
           </span>
