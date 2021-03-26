@@ -20,9 +20,6 @@ body, html {
   background-color: #303030;
   opacity: 1.0;
   -webkit-transition: background .3s linear;
-  -moz-transition: background .3s linear;
-  -o-transition: background .3s linear;
-  -ms-transition: background .3s linear;
   transition: background .3s linear;
 }
 
