@@ -14,11 +14,10 @@ export default class App extends React.Component {
     this.changePage = this.changePage.bind(this)
   }
 
-
   //takes the page slug as parameter
   changePage(pageName){
     fetch('./content.json')
-    .then(response => response.json())
+    .then(res => res.json())
     .then(data => {
       let pages = data.pages
       let pageData = pages.find(element => element.slug === pageName)
@@ -30,16 +29,17 @@ export default class App extends React.Component {
   }
 
   render(){
-    document.body.style.backgroundImage = `url(./backgrounds/${this.state.background})`;
-  return (
-    <div className="page-layout">
-      <Header changePage={this.changePage}/>
-      {
-        Object.keys(this.state.pageData).length !== 0 &&
-          <Content pageData={this.state.pageData}/>
-      }
-    </div>
-    )
-  }
-
+    return (
+      <>
+        <div className="background" style={{ backgroundImage: `url(./backgrounds/${this.state.background})` }}></div>
+        <div className="page-layout">
+          <Header changePage={this.changePage}/>
+          {
+            Object.keys(this.state.pageData).length !== 0 &&
+              <Content pageData={this.state.pageData}/>
+          }
+        </div>
+      </>
+      )
+    }
 }

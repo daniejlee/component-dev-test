@@ -21,6 +21,7 @@ const HeaderMenu = ({ changePage }) => {
             }
           )
         }
+
         setTitles(newPagesArray)
         setActivePage(pages[0].slug)
         changePage(pages[0].slug)

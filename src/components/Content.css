@@ -2,7 +2,22 @@
   margin-top: auto;
   margin-bottom: auto;
   align-items: center;
+
+  animation-name: fadeIn;
+  animation-duration: 1.5s;
+  animation-fill-mode: backwards;
+  animation-delay: 1.8s;
 }
+
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
 
 .headline {
   line-height: .9;
@@ -25,7 +40,22 @@
   background-color: white;
   height: 18vh;
   align-items: center;
+
+  animation-name: slideRight;
+  animation-duration: 1.2s;
+  animation-fill-mode: backwards;
+  animation-delay: 1s;
 }
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-3000px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 
 .cta {
   text-align: center;
@@ -36,11 +66,10 @@
 .lets-talk {
   display: flex;
   align-items: center;
-
   font-size: calc(12px + 1 * ((100vw - 320px) / 1600));
 }
 
-span {
+.lets-talk > span {
   font-weight: 800;
   cursor: pointer;
 }
