@@ -39,9 +39,9 @@ body, html {
 
 }
 
-@media only screen and (min-width: 1440px){
+@media only screen and (min-width: 1550px){
   .page-layout {
-    padding-right: calc(10vw - 200 * ((100vw - 1440px) / 480));
-    padding-left: calc(10vw - 200 * ((100vw - 1440px) / 480));
+    padding-right: 10vw;
+    padding-left: 10vw;
   }
 }
